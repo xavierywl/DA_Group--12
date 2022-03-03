@@ -33,7 +33,7 @@ headers = {
 r2 = requests.get(url2, headers=headers)
 print(r2.text)
 
-
+#Task 5
 class Whiskyspider(scrapy.Spider):
     name = 'Whisky'
     start_urls = [url]
@@ -45,7 +45,7 @@ class Whiskyspider(scrapy.Spider):
             yield {
                 'image': Whisky.css(IMG_SELECTOR).extract_first(),
             }
-
+#For next page
         NEXT_PAGE_SELECTOR = '.woocommerce-pagination > ul.page-numbers > li > a.next.page-numbers ::attr("href")'
         next_page = response.css(NEXT_PAGE_SELECTOR).extract_first()
         if next_page:
