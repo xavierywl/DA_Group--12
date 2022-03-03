@@ -1,3 +1,4 @@
+#To run scrappy command = scrapy runspider main.py -s USER_AGENT="Mobile"
 # Use the Request library
 import requests
 import scrapy
